@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <title>Inicio</title>
+  </head>
+  <body>
+    
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="../favicon.ico" alt="" width="80px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./sobre-nosotros.html">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./nuestros-tratamientos.html">Nuestros Tratamientos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./tipo-de-piel.html">Descubrí tu piel</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="form">
+        <h1>DESCUBRÍ TU TIPO DE PIEL</h1>
+        <img src="../assets/img/imagen-tipo-de-piel.jpg" alt="tipo-de-piel" width="550px">
+        <form action="resultado.html" method="GET">
+          <div>
+              <label for="edad">Edad:</label>
+              <input type="number" id="edad" name="edad" required>
+          </div>
+          
+          <div>
+              <label for="piel">Tipo de piel:</label>
+              <select id="piel" name="piel" required>
+                  <option value="seca">Seca</option>
+                  <option value="grasa">Grasa</option>
+                  <option value="mixta">Mixta</option>
+                  <option value="sensible">Sensible</option>
+              </select>
+          </div>
+          
+          <div>
+              <label for="preocupacion">¿Cuál es tu principal preocupación?</label>
+              <select id="preocupacion" name="preocupacion" required>
+                  <option value="acne">Acné</option>
+                  <option value="arrugas">Arrugas</option>
+                  <option value="manchas">Manchas</option>
+                  <option value="flacidez">Flacidez</option>
+                  <option value="hidratacion">Falta de hidratación</option>
+              </select>
+          </div>
+          
+          <div>
+              <label for="sensibilidad">¿Tienes piel sensible?</label>
+              <select id="sensibilidad" name="sensibilidad" required>
+                  <option value="si">Sí</option>
+                  <option value="no">No</option>
+              </select>
+          </div>
+          
+          <div>
+              <label for="rutina">¿Tienes una rutina de cuidado de la piel?</label>
+              <select id="rutina" name="rutina" required>
+                  <option value="siempre">Siempre</option>
+                  <option value="a_veces">A veces</option>
+                  <option value="nunca">Nunca</option>
+              </select>
+          </div>
+          
+          <div>
+              <label for="productos">¿Qué tipo de productos usas?</label>
+              <select id="productos" name="productos" required>
+                  <option value="naturales">Naturales</option>
+                  <option value="quimicos">Químicos</option>
+                  <option value="ambos">Ambos</option>
+                  <option value="ninguno">Ninguno</option>
+              </select>
+          </div>
+          
+          <div>
+              <label for="sol">¿Te expones mucho al sol?</label>
+              <select id="sol" name="sol" required>
+                  <option value="siempre">Siempre</option>
+                  <option value="a_veces">A veces</option>
+                  <option value="nunca">Nunca</option>
+              </select>
+          </div>
+          
+          <div>
+              <label for="agua">¿Cuánta agua bebes al día?</label>
+              <select id="agua" name="agua" required>
+                  <option value="menos_1l">Menos de 1 litro</option>
+                  <option value="1_2l">1-2 litros</option>
+                  <option value="mas_2l">Más de 2 litros</option>
+              </select>
+          </div>
+          
+          <div>
+              <label for="alimentacion">¿Cómo describirías tu alimentación?</label>
+              <select id="alimentacion" name="alimentacion" required>
+                  <option value="saludable">Saludable</option>
+                  <option value="equilibrada">Equilibrada</option>
+                  <option value="poco_saludable">Poco saludable</option>
+              </select>
+          </div>
+          
+          <div>
+              <button type="submit">Descubrir Tratamiento</button>
+          </div>
+        </form>
+      </section>
+      <section id="ubicacion">
+        <h2>¿Dónde estamos?</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3374.854900944465!2d-63.98524422530506!3d-32.23507317389483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cd72958f2f7931%3A0x8177400fb5a817ee!2sBelgrano%201298%2C%20X5933%20Tancacha%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1738543422802!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </section>
+      
+    </main>
+    <footer>
+      <div class="footer">
+        <a href="#" class="icon facebook">FACEBOOK</a>
+        <a href="#" class="icon twitter">TWITTER</a>
+        <a href="#" class="icon instagram">iNSTAGRAM</a>
+        <a href="#" class="icon linkedin">LINKEDIN</a>
+        <a href="https://wa.me/1126325935" class="whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+    <p>&copy; 2025 Todos los derechos reservados.</p> 
+    </footer>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>                                  

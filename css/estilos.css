@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Belanosima:wght@400;600;700&family=Comfortaa:wght@300..700&family=Montserrat:wght@900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Rubik+Mono+One&family=Space+Grotesk:wght@300..700&family=Tilt+Warp&display=swap');
+*{
+  color: #252425;
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*ESTILOS GENERALES DE LAS PÁGINAS*/
+
+body{
+  font-family: "Poppins",sans-serif;
+}
+
+section{
+  padding: 40px;
+  width: 100%;
+  padding-bottom: 0px;
+  margin-bottom: 20px;
+
+}
+header{
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fec5d0d7;
+  margin-bottom: 0;
+  justify-content: space-between;
+  align-items: center;
+  .navbar {
+    width: 100% !important;
+  }
+
+}
+ul{
+  display: flex;
+  list-style: none;
+
+  a{
+    margin-left: 15px;
+    text-decoration: none;
+    font-family: "Montserrat";
+    font-weight: 500;
+  }
+}
+
+h1{
+  font-family: "Montserrat","Poppins", sans-serif;
+  color: black;
+  margin-bottom: 40px;
+  font-size: 6rem !important;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+h2{
+  font-size: 3 rem;
+  color: rgb(0, 0, 0);
+  margin-bottom: 40px;
+
+}
+
+p{
+  margin: 70px;
+}
+
+footer{
+  background-color: #fec5cf;  /* Fondo rosa claro */
+  padding: 20px 0;  /* Espaciado dentro del footer */
+  text-align: center;
+  
+  
+}
+.fa-whatsapp{
+  color: rgb(23, 196, 23);  /* Color verde para el ícono de WhatsApp */
+  font-size: 5rem;  /* Tamaño grande para el ícono */
+  position: fixed;  /* Fijo en la pantalla */
+  right: 20px;  /* A la derecha */
+  bottom: 30px;  /* Abajo */
+}
+
+footer p {
+  color: white;  /* Texto blanco en el pie de página */
+  margin-top: 10px;
+}
+span{
+  color: #f1748e;
+}
+/*ESTILOS INDEX*/
+
+/*PROPIEDADES PARA LA PRIMERA SECCIÓN DE LA PÁGINA PRINCIPAL*/
+.seccion1inicio{
+  overflow: hidden;
+  text-align: center;
+  font-family: "Montserrat", "Poppins", sans-serif;
+  padding: 20px;
+  font-size: 3 rems;
+  display: block;
+  color: #ffffff;
+  background-image: url("../assets/img/img-fondo-inicio.jpeg");
+  background-attachment: fixed;
+  opacity: 0.8;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(241, 116, 142, 0.7); /* Rosa con transparencia */
+  
+  span{
+    color: #f1748e;
+  }
+
+  .button{
+    text-decoration: none;
+    color: white;
+    margin-top: 50px;
+    padding: 20px;
+    font-family: "Poppins",sans-serif;
+    font-size: 1 rem;
+    border-radius: 5px;
+    border-color: #f1748e;
+    background-color: #f1748e;
+  }
+  .btn{
+    margin: 20px 0;
+  }
+  
+  p{
+    margin: 50px;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 1.3rem;
+  }
+}
+
+/*PROPIEDADES PARA LA SEGUNDA SECCIÓN DE LA PÁGINA DE INICIO QUIENES SOMOS*/
+.nosotros-inicio{
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  .quienessomos{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  img{
+    width: 50%;
+    height: auto;
+    opacity: 0.75;
+    
+  }
+  a{
+    text-decoration: none;
+    color: white;
+    margin-top: 50px;
+    padding: 20px;
+    font-family: "Poppins";
+    font-size: 1 rem;
+    border-radius: 10px;
+    border-color: #f1748e;
+    background-color: #f1748e;
+  }
+  
+}
+@media (max-width:1000px) {
+  .nosotros-inicio{
+    display: block;
+  }
+    
+}
+/*SECCCIÓN NUESTROS TRATAMIENTOS - INICIO*/
+
+.inicio-trtamientos{
+  padding-bottom: 50px;
+  text-align: center;
+  display: block;
+  background-image: url("../assets/img/imagen-tratamientos-inicio.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(241, 116, 142, 0.7);
+  h2{
+    padding-top: 40px;
+    font-size: 5rem;
+  }
+  p{
+
+    padding: 10px;
+    color: #333232;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  div div img {
+    width: 400px;
+    height: 400px;
+  }
+  div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+  /*SECCCIÓN FORMULARIO INICIO*/
+
+  
+  .inicio-formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 80vh; 
+    padding: 20px;
+    .form-control {
+      font-family: "Poppins", sans-serif;
+      font-size: 1.2rem;
+      font-weight: 300;
+      width: 100%;
+      div{
+        margin-top: 30px;
+        margin-left: 30px;
+      }
+    }
+    h2{
+      font-family: "Poppins", sans-serif;
+      font-size: 4rem;
+      color: #fec5cf;
+    }
+    div {
+      display: flex;
+      justify-content: center;
+      gap: 10px; /* Espacio entre los botones */
+    }
+    #enviar, #limpiar {
+      background-color: #fec5cf; 
+      color: white; 
+      border: none; 
+      padding: 10px 20px; 
+      font-size: 1rem; 
+      cursor: pointer; 
+      border-radius: 5px; 
+      transition: background 0.3s ease; 
+    }
+    
+    #limpiar {
+      background-color: #f1748e; 
+    }
+    
+    #enviar:hover {
+      background-color: #f1748e; 
+    }
+    
+    #limpiar:hover {
+      background-color: #f1748e; 
+    }   
+  }
+
+
+
+
+/*ESTILOS PARA LA SEGUNDA PÁGINA - PRIMERA PARTE - PAGINA PRINCIPAL*/
+
+.nosotros-nosotros{
+  text-align: center;
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: row;
+  justify-content: space-evenlys;
+  align-items: center;
+  h1{
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    font-size: 3rem;
+  }
+  h2{
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+  }
+  p{
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+  }
+}
+
+#metas{
+  background-image: linear-gradient(to right top, #00000093,  #f1abab93), url("../assets/img/imagen-metas-sobre-nosotros.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .card{
+    background-color: #fcfcfc00;
+    border: none;
+    p{
+      color: #ffffff;
+    }
+    img{
+      width: 7rem;
+    }
+  }
+
+
+  h2{
+    text-align: center;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 3.5rem;
+    font-weight: 600;
+  }
+  p{
+    margin:0;
+    text-align: center;
+  }
+}
