@@ -19,61 +19,165 @@ section{
   margin-bottom: 20px;
 
 }
-header{
+header {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600!important;
   display: flex;
+  flex-wrap: inherit;
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #fec5d0d7;
+  background-color: #fec5cf;
   margin-bottom: 0;
   justify-content: space-between;
   align-items: center;
+
   .navbar {
     width: 100% !important;
+
+    .conteiner-fluid {
+      height: 100% !important;
+    }
+
+    
+  }
+}
+
+.collapse.navbar-collapse {
+  height: 100% !important;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: stretch; 
+}
+
+.navbar-nav .boton {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px; 
+  padding: 0 15px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    z-index: -1;
+    background-color: #7c7c7c;
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+    transition: transform 0.6s cubic-bezier(0.08, 0.35, 0.13, 1.02), opacity 0.4s;
   }
 
+  &:hover {
+    color: #f52c50 !important;
+
+    &::before {
+      opacity: 1;
+      background-color: #fff;
+      border-radius: 30px;
+      transform: scaleY(1);
+    }
+  }
 }
+
 ul{
-  display: flex;
   list-style: none;
 
   a{
-    margin-left: 15px;
+    color: #ffffff !important;
     text-decoration: none;
-    font-family: "Montserrat";
-    font-weight: 500;
+    font-family: "Poppins";
+    font-weight: 600;
+    
   }
 }
 
 h1{
-  font-family: "Montserrat","Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: black;
-  margin-bottom: 40px;
-  font-size: 6rem !important;
-  margin-bottom: 20px;
+  font-size: 7rem !important; 
   font-weight: 400;
 }
 
 h2{
   font-size: 3 rem;
-  color: rgb(0, 0, 0);
-  margin-bottom: 40px;
+  color: rgb(59, 56, 56);
 
 }
 
-p{
-  margin: 70px;
-}
 
 footer{
-  background-color: #fec5cf;  /* Fondo rosa claro */
-  padding: 20px 0;  /* Espaciado dentro del footer */
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  
+  display:block;
+  font-family: "Poppins";
+  font-weight: 500;
+  background-color: #fec5cf; 
+  padding: 20px 0;  
+  text-align: center;
+  list-style: none;
+
+  .listas-footer{
+    justify-content: space-evenly;
+    align-items: flex-start;
+    text-align: center;
+    display:block;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    .lista1{
+      display: block;
+    }
+    .lista1{
+      display: block;
+      
+    }
+  }
+  .fa-square-instagram, .fa-tiktok {
+    color:#f52c50;
+    font-size: 50px;
+    margin: 20px;
+  }
+
+  .fa-square-facebook{
+    color:#f52c50;
+    font-size: 50px;
+    margin: 20px;
+  }
+
+  p{
+    font-size: 20px;
+    font-weight: 600;
+    align-self: flex-end;
+  }
   
 }
-.fa-whatsapp{
-  color: rgb(23, 196, 23);  /* Color verde para el ícono de WhatsApp */
+
+.listas-footer ul li,
+.listas-footer ul li,
+.listas-footer ul li a {
+  color: #7c7c7c !important; /* Forzar color blanco */
+  text-decoration: none !important; /* Eliminar subrayado */
+}
+.contenido, .servicios, .contenido{
+  font-family: "Poppins", "Montserrat", sans-serif;
+  font-size: 2rem;
+}
+
+.fa-square-whatsapp{
+  color: #f52c50;  /* Color verde para el ícono de WhatsApp */
   font-size: 5rem;  /* Tamaño grande para el ícono */
   position: fixed;  /* Fijo en la pantalla */
   right: 20px;  /* A la derecha */
@@ -271,10 +375,21 @@ span{
   justify-content: space-evenlys;
   align-items: center;
   h1{
+    font-size: 4rem;
+    color: #7c7c7c !important;
     width: 100%;
     margin: 0;
     padding: 10px;
     font-size: 3rem;
+    .resaltado{
+      background-color: #fec5cf;
+      color: white;
+      font-weight: 800;
+      font-style: italic;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      border-radius: 6px;
+    }
   }
   h2{
     width: 100%;
@@ -285,6 +400,42 @@ span{
     width: 100%;
     margin: 0;
     padding: 10px;
+  }
+}
+@media (max-width: 1000px) {
+  .nosotros-nosotros{
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-evenlys;
+    align-items: center;
+    h1{
+      font-family: "Poppins", sans-serif !important;
+      width: 100%;
+      margin: 0;
+      padding: 10px;
+      font-size: 4rem !important;
+      font-weight: 300;
+    }
+    h2{
+      width: 100%;
+      padding: 10px;
+      margin: 0;
+    }
+    p{
+      width: 100%;
+      margin: 0;
+      padding: 10px;
+    }
+    h3{
+      font-size: 1rem;
+    }
+    img{
+      width: 400px;
+    }
+    
   }
 }
 
@@ -322,5 +473,31 @@ span{
   p{
     margin:0;
     text-align: center;
+  }
+}
+/*ESTILOS DE NUESTROS TRATAMIENTOS - PRIMERA SECCION*/
+
+.nuestros-tratamientos{
+  background-color: green;
+  width: 100% !important;
+  padding: 40px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  h1{
+    font-size: 6vw !important;
+    font-weight: 600;
+    color: #7c7c7c;
+  }
+  p{
+    font-size: 1rem;
+  }
+
+  .imagen{
+    background-color: #f52c50;
+  }
+  .texto-nuestros-tratamientos{
+    background-color: yellow;
   }
 }
