@@ -12,9 +12,9 @@
   <body>
     
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="../favicon.ico" alt="" width="50px"></a>
+      <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid bg-dark">
+          <a class="navbar-brand" href="#"><img class="rounded-circle" src="../favicon.ico" alt="" width="50px"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -41,144 +41,166 @@
       </nav>
     </header>
     <main>
-      <section id="form">
-        <h1>DESCUBRÍ TU TIPO DE PIEL</h1>
-        <img src="../assets/img/imagen-tipo-de-piel.jpg" alt="tipo-de-piel" width="550px">
-        <form action="resultado.html" method="GET">
-          <div>
-              <label for="edad">Edad:</label>
-              <input type="number" id="edad" name="edad" required>
-          </div>
-          
-          <div>
-              <label for="piel">Tipo de piel:</label>
-              <select id="piel" name="piel" required>
-                  <option value="seca">Seca</option>
-                  <option value="grasa">Grasa</option>
-                  <option value="mixta">Mixta</option>
-                  <option value="sensible">Sensible</option>
-              </select>
-          </div>
-          
-          <div>
-              <label for="preocupacion">¿Cuál es tu principal preocupación?</label>
-              <select id="preocupacion" name="preocupacion" required>
-                  <option value="acne">Acné</option>
-                  <option value="arrugas">Arrugas</option>
-                  <option value="manchas">Manchas</option>
-                  <option value="flacidez">Flacidez</option>
-                  <option value="hidratacion">Falta de hidratación</option>
-              </select>
-          </div>
-          
-          <div>
-              <label for="sensibilidad">¿Tienes piel sensible?</label>
-              <select id="sensibilidad" name="sensibilidad" required>
-                  <option value="si">Sí</option>
-                  <option value="no">No</option>
-              </select>
-          </div>
-          
-          <div>
-              <label for="rutina">¿Tienes una rutina de cuidado de la piel?</label>
-              <select id="rutina" name="rutina" required>
-                  <option value="siempre">Siempre</option>
-                  <option value="a_veces">A veces</option>
-                  <option value="nunca">Nunca</option>
-              </select>
-          </div>
-          
-          <div>
-              <label for="productos">¿Qué tipo de productos usas?</label>
-              <select id="productos" name="productos" required>
-                  <option value="naturales">Naturales</option>
-                  <option value="quimicos">Químicos</option>
-                  <option value="ambos">Ambos</option>
-                  <option value="ninguno">Ninguno</option>
-              </select>
-          </div>
-          
-          <div>
-              <label for="sol">¿Te expones mucho al sol?</label>
-              <select id="sol" name="sol" required>
-                  <option value="siempre">Siempre</option>
-                  <option value="a_veces">A veces</option>
-                  <option value="nunca">Nunca</option>
-              </select>
-          </div>
-          
-          <div>
-              <label for="agua">¿Cuánta agua bebes al día?</label>
-              <select id="agua" name="agua" required>
-                  <option value="menos_1l">Menos de 1 litro</option>
-                  <option value="1_2l">1-2 litros</option>
-                  <option value="mas_2l">Más de 2 litros</option>
-              </select>
-          </div>
-          
-          <div>
-              <label for="alimentacion">¿Cómo describirías tu alimentación?</label>
-              <select id="alimentacion" name="alimentacion" required>
-                  <option value="saludable">Saludable</option>
-                  <option value="equilibrada">Equilibrada</option>
-                  <option value="poco_saludable">Poco saludable</option>
-              </select>
-          </div>
-          
-          <div>
-              <button type="submit">Descubrir Tratamiento</button>
-          </div>
+      <section class="container py-5">
+        <h2 class="text-center text-rosa">Ficha Técnica <span>Evaluación Dermatocosmiátrica</span></h2>
+        <form action="resultado.html" method="POST" class="p-4 bg-white shadow-lg rounded formulario-estilizado">
+            
+            <!-- Datos Personales -->
+            <fieldset>
+                <legend class="titulo-seccion">Datos Personales</legend>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="edad">Edad</label>
+                        <input type="number" id="edad" name="edad" class="form-control" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <!-- Historial Clínico -->
+            <fieldset>
+                <legend class="titulo-seccion">Historial Clínico</legend>
+                <div class="mb-3">
+                    <label>¿Sufres alguna de estas condiciones?</label>
+                    <div class="form-check">
+                        <input type="checkbox" id="acne" name="condiciones[]" value="Acné" class="form-check-input">
+                        <label for="acne" class="form-check-label">Acné</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="rosacea" name="condiciones[]" value="Rosácea" class="form-check-input">
+                        <label for="rosacea" class="form-check-label">Rosácea</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="dermatitis" name="condiciones[]" value="Dermatitis" class="form-check-input">
+                        <label for="dermatitis" class="form-check-label">Dermatitis</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="psoriasis" name="condiciones[]" value="Psoriasis" class="form-check-input">
+                        <label for="psoriasis" class="form-check-label">Psoriasis</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="ninguna" name="condiciones[]" value="Ninguna" class="form-check-input">
+                        <label for="ninguna" class="form-check-label">Ninguna</label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="tratamientos_previos">¿Has recibido tratamientos dermatológicos o cosméticos?</label>
+                    <textarea id="tratamientos_previos" name="tratamientos_previos" class="form-control" rows="3"></textarea>
+                </div>
+            </fieldset>
+            
+            <!-- Hábitos y Rutina -->
+            <fieldset>
+                <legend class="titulo-seccion">Hábitos y Rutina</legend>
+                <div class="mb-3">
+                    <label for="sol">¿Con qué frecuencia te expones al sol?</label>
+                    <select id="sol" name="sol" class="form-select select-estilizado" required>
+                        <option value="diario">Diario</option>
+                        <option value="ocasional">Ocasionalmente</option>
+                        <option value="rara_vez">Rara vez</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="agua">¿Cuánta agua consumes al día?</label>
+                    <select id="agua" name="agua" class="form-select select-estilizado" required>
+                        <option value="menos_1l">Menos de 1 litro</option>
+                        <option value="1_2l">1-2 litros</option>
+                        <option value="mas_2l">Más de 2 litros</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="productos">¿Qué tipo de productos utilizas?</label>
+                    <select id="productos" name="productos" class="form-select select-estilizado" required>
+                        <option value="naturales">Naturales</option>
+                        <option value="quimicos">Químicos</option>
+                        <option value="ambos">Ambos</option>
+                        <option value="ninguno">Ninguno</option>
+                    </select>
+                </div>
+            </fieldset>
+            
+            <!-- Objetivos -->
+            <fieldset>
+                <legend class="titulo-seccion">Objetivos del Tratamiento</legend>
+                <div class="mb-3">
+                    <label for="objetivo">¿Qué deseas mejorar en tu piel?</label>
+                    <textarea id="objetivo" name="objetivo" class="form-control" rows="3"></textarea>
+                </div>
+            </fieldset>
+            
+            <!-- Botones -->
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary boton-rosa">Enviar</button>
+                <button type="reset" class="btn btn-secondary boton-gris">Limpiar</button>
+            </div>
         </form>
-      </section>
+    </section>
+    
+      
+      
       <section id="ubicacion">
         <h2>¿Dónde estamos?</h2>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3374.854900944465!2d-63.98524422530506!3d-32.23507317389483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cd72958f2f7931%3A0x8177400fb5a817ee!2sBelgrano%201298%2C%20X5933%20Tancacha%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1738543422802!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </section>
       
     </main>
-    <footer>
-      <div class="listas-footer" >
-        <div class="lista1">
-          <ul>
-            <li><span class="contenido">CONTENIDO</span></li>
-            <br>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="./sobre-nosotros.html">Nosotros</a></li>
-            <li><a href="./nuestros-tratamientos.html">Nuestros tratamientos</a></li>
-            <li><a href="./tipo-de-piel.html">Tipo de piel</a></li>
-            <li><a href="./contacto.html">Contactanos</a></li>
+    <footer class="container-fluid bg-dark text-white py-4">
+      <div class="row text-center text-md-center">
+        <div class="col-md-4 mb-3">
+          <h5 class="contenido">CONTENIDO</h5>
+          <ul class="list-unstyled">
+            <li><a href="../index.html" class="text-white">Inicio</a></li>
+            <li><a href="./sobre-nosotros.html" class="text-white">Nosotros</a></li>
+            <li><a href="./nuestros-tratamientos.html" class="text-white">Nuestros tratamientos</a></li>
+            <li><a href="./tipo-de-piel.html" class="text-white">Tipo de piel</a></li>
+            <li><a href="./contacto.html" class="text-white">Contactanos</a></li>
           </ul>
         </div>
-        <div class="lista2">
-          <ul>
-          <li><span class="servicios">SERVICIOS</span></li>
-          <br>
-          <li><a href="#">Consulta Online</a></li>
-          <li><a href="#">Diagnóstico de Piel</a></li>
-          <li><a href="#">Productos Recomendados</a></li>
-        </ul>
+        <div class="col-md-4 mb-3">
+          <h5 class="servicios">SERVICIOS</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Consulta Online</a></li>
+            <li><a href="#" class="text-white">Diagnóstico de Piel</a></li>
+            <li><a href="#" class="text-white">Productos Recomendados</a></li>
+          </ul>
         </div>
-        <div class="lista3">
-          <ul>
-            <li><span class="contenido">CONTENIDO</span></li>
-            <br>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="./sobre-nosotros.html">Nosotros</a></li>
-            <li><a href="./nuestros-tratamientos.html">Nuestros tratamientos</a></li>
-            <li><a href="./tipo-de-piel.html">Tipo de piel</a></li>
-            <li><a href="./contacto.html">Contactanos</a></li>
+        <div class="col-md-4 mb-3">
+          <h5 class="contenido">CONTENIDO</h5>
+          <ul class="list-unstyled">
+            <li><a href="../index.html" class="text-white">Inicio</a></li>
+            <li><a href="./sobre-nosotros.html" class="text-white">Nosotros</a></li>
+            <li><a href="./nuestros-tratamientos.html" class="text-white">Nuestros tratamientos</a></li>
+            <li><a href="./tipo-de-piel.html" class="text-white">Tipo de piel</a></li>
+            <li><a href="./contacto.html" class="text-white">Contactanos</a></li>
           </ul>
         </div>
       </div>
-      
-      
-      <div class="enlaces">
-        <a href="#" class="icon facebook"><i class="fa-brands fa-square-facebook fa-lg"></i></a>
-        <a href="#" class="icon tiktok"><i class="fa-brands fa-tiktok fa-lg"></i></a>
-        <a href="#" class="icon instagram"><i class="fa-brands fa-square-instagram"></i></a>
-        <a href="https://wa.me/1126325935" class="whatsapp" target="_blank"><i class="fa-brands fa-square-whatsapp"></i></a>
-    </div>
-    <p>&copy; 2025 Todos los derechos reservados.</p>
+      <div class="row text-center mt-3">
+        <div class="col">
+          <a href="#" class="text-white me-3"><i class="fa-brands fa-square-facebook fa-lg"></i></a>
+          <a href="#" class="text-white me-3"><i class="fa-brands fa-tiktok fa-lg"></i></a>
+          <a href="#" class="text-white me-3"><i class="fa-brands fa-square-instagram"></i></a>
+          <a href="https://wa.me/1126325935" class="text-white" target="_blank"><i class="fa-brands fa-square-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="row text-center mt-3">
+        <div class="col">
+          <p class="mb-0">&copy; 2025 Todos los derechos reservados.</p>
+        </div>
+      </div>
     </footer>
     <script src="../js/bootstrap.bundle.min.js"></script>
   </body>

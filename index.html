@@ -12,9 +12,9 @@
   <body>
     
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg bg-dark text-white">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="./favicon.ico" alt="" width="50px"></a>
+          <a class="navbar-brand" href="#"><img class="rounded-circle" src="./favicon.ico" alt="" width="50px"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -30,7 +30,7 @@
                 <a class="nav-link boton" href="./pages/nuestros-tratamientos.html">Nuestros Tratamientos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link boton" href="./pages/nuestros-tratamientos.html">Descubrí tu piel</a>
+                <a class="nav-link boton" href="./pages/tipo-de-piel.html">Descubrí tu piel</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link boton" href="./pages/contacto.html">Contacto</a>
@@ -40,120 +40,121 @@
         </div>
       </nav>
     </header>
-    <main>
-      <section class="seccion1inicio">
-        <h1 class="principal1">Estética y <span class="salud">Salud</span> </h1>
-        
+    <main class="container-fluid p-0"> 
+      <section class="seccion1inicio text-center py-5 w-100">
+        <h1 class="principal1">Estética y <span class="salud">Salud</span></h1>
         <h2 class="titulosec">Tu bienestar es nuestra prioridad</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quam molestias accusamus temporibus aperiam, sint sed ipsum labore nostrum soluta, nihil eligendi reiciendis eos architecto, impedit neque cum dolore facilis.
-          Quam quae voluptates, pariatur tenetur at autem cumque nostrum deleniti harum velit amet magnam exercitationem itaque repellat sed quaerat minus, et enim. Debitis beatae ea, perferendis et fugit quo placeat!
-        </p>
-        <div class="btn"><a href="./pages/contacto.html" class="button"> Reserva tu turno</a></div>
-      </section>
-      <section class="nosotros-inicio">
-        <img src="./assets/img/img-nosotros-inicio.jpg" alt="chica" width="50%">
-        <div class="texto quienessomos">
-          <h2>¿Quiénes Somos?</h2>
-          <p>Somos un equipo apasionado de profesionales en estética, dedicados a resaltar tu belleza y bienestar. Desde tratamientos faciales hasta el cuidado de manos y pies, nuestro objetivo es brindarte una experiencia única que te haga sentir renovado.
-            ¿Quieres saber más? ¡Descubre nuestra historia y lo que podemos hacer por ti! </p>
-          <div class="btn quienessomosinicio"><a href="./pages/contacto.html" class="button"> Reserva tu turno</a></div>
+        <p>En nuestro centro, combinamos ciencia y bienestar para brindarte los mejores tratamientos dermatocosmiátricos. Descubre una piel saludable, radiante y en equilibrio.</p>
+        <div class="mt-3">
+          <a href="./pages/contacto.html" class="button btn-primary">Reserva tu turno</a>
         </div>
-        
-        
-  
       </section>
-      <section class="inicio-trtamientos">
-        <h2>Nuestros Tratamientos</h2>
-        <p>En R&D, ofrecemos una amplia gama de tratamientos diseñados para realzar tu belleza y bienestar. Cada servicio está pensado para adaptarse a tus necesidades específicas, utilizando técnicas avanzadas y productos de alta calidad. Ya sea que busques un tratamiento facial rejuvenecedor, un cuidado especializado para tus manos y pies, o algo más personalizado, nuestro equipo está aquí para brindarte una experiencia de lujo que te hará sentir renovado.</p>
-        <div class="fotos-tratamientos">
-          <div class="img-1">
-            <img src="./assets/img/imagen-microneedling-tratamientos.png">
-            <a class="btn btn-primary" href="./pages/nuestros-tratamientos.html" role="button">Ver más</a>
+    
+      <section class="nosotros-inicio d-flex flex-column flex-md-row align-items-center w-100">
+        <img src="./assets/img/img-nosotros-inicio.jpg" alt="chica" class="img-fluid w-50">
+        <div class="texto quienessomos text-center text-md-center ms-md-4 text-center align-items-center">
+          <h2 class="">¿Quiénes Somos?</h2>
+          <p>Somos un equipo apasionado de profesionales en estética y cuidado de la piel, comprometidos con realzar tu belleza natural a través de tratamientos personalizados. Combinamos innovación, experiencia y productos de alta calidad para brindarte soluciones efectivas y seguras. Tu bienestar y confianza son nuestra prioridad. 💆‍♀️💖</p>
+          <div class="btn quienessomosinicio">
+            <a href="./pages/contacto.html" class="button btn-primary">Reserva tu turno</a>
           </div>
-          <div class="img-2">
-            <img src="./assets/img/imagen-plasmapen-tratamientos.png" alt="">
-            <a class="btn btn-primary" href="./pages/nuestros-tratamientos.html" role="button">Ver más</a>
-          </div>
-          <div class="img-3">
-            <img src="./assets/img/imagen-radiofrecuencia-tratamientos.png" alt="">
-            <a class="btn btn-primary" href="./pages/nuestros-tratamientos.html" role="button">Ver más</a>
-          </div>
-          
-          
-          
         </div>
-        
       </section>
-      <section class="inicio-formulario">
+    
+      <section class="inicio-tratamientos text-center py-5 w-100 bg-dark text-white">
+        <h2 class="text-white">Nuestros <span>Tratamientos</span></h2>
+        <p class="text-white">En R&D, ofrecemos una amplia gama de tratamientos diseñados para realzar tu belleza y bienestar...</p>
+        <div class="fotos-tratamientos row justify-content-center">
+          <div class="col-12 col-md-4 text-center">
+            <img src="./assets/img/imagen-microneedling-tratamientos.png" class="img-fluid">
+            <a class="button mt-3" href="./pages/nuestros-tratamientos.html" role="button">Ver más</a>
+          </div>
+          <div class="col-12 col-md-4 text-center">
+            <img src="./assets/img/imagen-plasmapen-tratamientos.png" class="img-fluid">
+            <a class="button mt-3" href="./pages/nuestros-tratamientos.html" role="button">Ver más</a>
+          </div>
+          <div class="col-12 col-md-4 text-center">
+            <img src="./assets/img/imagen-radiofrecuencia-tratamientos.png" class="img-fluid">
+            <a class="button mt-3" href="./pages/nuestros-tratamientos.html" role="button">Ver más</a>
+          </div>
+        </div>
+      </section>
+    
+      <section class="inicio-formulario text-center py-5 w-100">
         <h2>Contactanos</h2>
-        <form action="" class="form-control">
-          <div class="nombre">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" placeholder="Ingrese su Nombre" required>
+        <form action="" class="form-control container p-4">
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" class="form-control" placeholder="Ingrese su Nombre" required>
+            </div>
+            <div class="col-md-6">
+              <label for="apellido">Apellido</label>
+              <input type="text" id="apellido" class="form-control" placeholder="Ingrese su Apellido" required>
+            </div>
           </div>
-          <div class="apellido">
-            <label for="apellido">Apellido</label>
-            <input type="text" id="apellido"placeholder="Ingrese su Apellido" required>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="celular">Ingrese su número de celular</label>
+              <input type="text" id="celular" class="form-control" placeholder="Ingrese su número de Teléfono" required>
+            </div>
+            <div class="col-md-6">
+              <label for="email">Ingrese su E-mail</label>
+              <input type="email" id="email" class="form-control" placeholder="Ingrese su email" required>
+            </div>
           </div>
-          <div class="celular">
-            <label for="celular">Ingrese su número de celular</label>
-            <input type="text" id="celular"placeholder="Ingrese su número de Telefono" required>
-          </div>
-          <div class="email">
-            <label for="email">Ingrese su E-mail</label>
-            <input type="email" id="email"placeholder="Ingrese su email" required>
-          </div>
-          <div>
-            <input type="submit" value="Enviar" id="enviar">
-            <input type="reset" value="Limpiar" id="limpiar">
+          <div class="d-flex justify-content-center gap-3">
+            <input type="submit" value="Enviar" id="enviar" class="btn btn-success">
+            <input type="reset" value="Limpiar" id="limpiar" class="btn btn-danger">
           </div>
         </form>
       </section>
     </main>
-    <footer>
-      <div class="listas-footer" >
-        <div class="lista1">
-          <ul>
-            <li><span class="contenido">CONTENIDO</span></li>
-            <br>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="./sobre-nosotros.html">Nosotros</a></li>
-            <li><a href="./nuestros-tratamientos.html">Nuestros tratamientos</a></li>
-            <li><a href="./tipo-de-piel.html">Tipo de piel</a></li>
-            <li><a href="./contacto.html">Contactanos</a></li>
+    
+    <footer class="container-fluid bg-dark text-white py-4">
+      <div class="row text-center text-md-center">
+        <div class="col-md-4 mb-3">
+          <h5 class="contenido">CONTENIDO</h5>
+          <ul class="list-unstyled">
+            <li><a href="../index.html" class="text-white">Inicio</a></li>
+            <li><a href="./sobre-nosotros.html" class="text-white">Nosotros</a></li>
+            <li><a href="./nuestros-tratamientos.html" class="text-white">Nuestros tratamientos</a></li>
+            <li><a href="./tipo-de-piel.html" class="text-white">Tipo de piel</a></li>
+            <li><a href="./contacto.html" class="text-white">Contactanos</a></li>
           </ul>
         </div>
-        <div class="lista2">
-          <ul>
-          <li><span class="servicios">SERVICIOS</span></li>
-          <br>
-          <li><a href="#">Consulta Online</a></li>
-          <li><a href="#">Diagnóstico de Piel</a></li>
-          <li><a href="#">Productos Recomendados</a></li>
-        </ul>
+        <div class="col-md-4 mb-3">
+          <h5 class="servicios">SERVICIOS</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Consulta Online</a></li>
+            <li><a href="#" class="text-white">Diagnóstico de Piel</a></li>
+            <li><a href="#" class="text-white">Productos Recomendados</a></li>
+          </ul>
         </div>
-        <div class="lista3">
-          <ul>
-            <li><span class="contenido">CONTENIDO</span></li>
-            <br>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="./sobre-nosotros.html">Nosotros</a></li>
-            <li><a href="./nuestros-tratamientos.html">Nuestros tratamientos</a></li>
-            <li><a href="./tipo-de-piel.html">Tipo de piel</a></li>
-            <li><a href="./contacto.html">Contactanos</a></li>
+        <div class="col-md-4 mb-3">
+          <h5 class="contenido">CONTENIDO</h5>
+          <ul class="list-unstyled">
+            <li><a href="../index.html" class="text-white">Inicio</a></li>
+            <li><a href="./sobre-nosotros.html" class="text-white">Nosotros</a></li>
+            <li><a href="./nuestros-tratamientos.html" class="text-white">Nuestros tratamientos</a></li>
+            <li><a href="./tipo-de-piel.html" class="text-white">Tipo de piel</a></li>
+            <li><a href="./contacto.html" class="text-white">Contactanos</a></li>
           </ul>
         </div>
       </div>
-      
-      
-      <div class="enlaces">
-        <a href="#" class="icon facebook"><i class="fa-brands fa-square-facebook fa-lg"></i></a>
-        <a href="#" class="icon tiktok"><i class="fa-brands fa-tiktok fa-lg"></i></a>
-        <a href="#" class="icon instagram"><i class="fa-brands fa-square-instagram"></i></a>
-        <a href="https://wa.me/1126325935" class="whatsapp" target="_blank"><i class="fa-brands fa-square-whatsapp"></i></a>
-    </div>
-    <p>&copy; 2025 Todos los derechos reservados.</p>
+      <div class="row text-center mt-3">
+        <div class="col">
+          <a href="#" class="text-white me-3"><i class="fa-brands fa-square-facebook fa-lg"></i></a>
+          <a href="#" class="text-white me-3"><i class="fa-brands fa-tiktok fa-lg"></i></a>
+          <a href="#" class="text-white me-3"><i class="fa-brands fa-square-instagram"></i></a>
+          <a href="https://wa.me/1126325935" class="text-white" target="_blank"><i class="fa-brands fa-square-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="row text-center mt-3">
+        <div class="col">
+          <p class="mb-0">&copy; 2025 Todos los derechos reservados.</p>
+        </div>
+      </div>
     </footer>
     <script src="./js/bootstrap.bundle.min.js"></script>
   </body>

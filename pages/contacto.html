@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/estilos.css">
     <title>Inicio</title>
@@ -12,9 +13,9 @@
   <body>
     
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="../favicon.ico" alt="" width="50px"></a>
+      <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid bg-dark">
+          <a class="navbar-brand" href="#"><img class="rounded-circle" src="../favicon.ico" alt="" width="50px"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -41,80 +42,130 @@
       </nav>
     </header>
     <main>
-      <section>
-        <h1>¡Contactanos!</h1>
-        <h2>¡Descubre como podemos potenciar tu piel!</h2>
-        <section id="formulario">
-          <img src="../assets/img/" alt="mujer-2">
-          <h2>Contactanos</h2>
-          <form action="">
-            <div class="nombre">
-              <label for="nombre">Nombre</label>
-              <input type="text" id="nombre" placeholder="Ingrese su Nombre" required>
+      <section id="contacto" class="container py-5">
+        <h2 class="titulo-seccion">Contáctanos</h2>
+        <form action="enviar.php" method="POST" enctype="multipart/form-data" class="formulario-contacto p-4 bg-white shadow-lg rounded">
+            
+            <!-- Datos Personales -->
+            <fieldset>
+                <legend>Datos Personales</legend>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" class="form-control" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="edad">Edad</label>
+                        <input type="number" id="edad" name="edad" class="form-control" required>
+                    </div>
+                </div>
+            </fieldset>
+    
+            <!-- Motivo de Contacto -->
+            <fieldset>
+                <legend>Motivo de Contacto</legend>
+                <div class="mb-3">
+                    <label for="motivo">Selecciona el motivo de tu consulta:</label>
+                    <select id="motivo" name="motivo" class="form-select" required>
+                        <option value="consulta_general">Consulta General</option>
+                        <option value="tratamiento_facial">Tratamiento Facial</option>
+                        <option value="tratamiento_corporal">Tratamiento Corporal</option>
+                        <option value="problema_piel">Problemas de Piel</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="mensaje">Describe tu consulta</label>
+                    <textarea id="mensaje" name="mensaje" class="form-control" rows="4" required></textarea>
+                </div>
+            </fieldset>
+    
+            <!-- Disponibilidad -->
+            <fieldset>
+                <legend>Disponibilidad</legend>
+                <div class="mb-3">
+                    <label for="disponibilidad">¿Cuándo te gustaría ser contactado?</label>
+                    <select id="disponibilidad" name="disponibilidad" class="form-select" required>
+                        <option value="manana">Mañana</option>
+                        <option value="tarde">Tarde</option>
+                        <option value="noche">Noche</option>
+                        <option value="cualquier_hora">Cualquier hora</option>
+                    </select>
+                </div>
+            </fieldset>
+    
+            <!-- Adjuntar Imágenes -->
+            <fieldset>
+                <legend>Adjuntar Imágenes (Opcional)</legend>
+                <div class="mb-3">
+                    <label for="imagen">Si tienes fotos de tu piel que puedan ayudar a la consulta, súbelas aquí:</label>
+                    <input type="file" id="imagen" name="imagen" class="form-control" accept="image/*" multiple>
+                </div>
+            </fieldset>
+    
+            <!-- Botones -->
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="reset" class="btn btn-secondary">Limpiar</button>
             </div>
-            <div class="apellido">
-              <label for="apellido">Apellido</label>
-              <input type="text" id="apellido"placeholder="Ingrese su Apellido" required>
-            </div>
-            <div class="celular">
-              <label for="celular">Ingrese su número de celular</label>
-              <input type="text" id="celular"placeholder="Ingrese su número de Telefono" required>
-            </div>
-            <div class="email">
-              <label for="email">Ingrese su E-mail</label>
-              <input type="email" id="email"placeholder="Ingrese su email" required>
-            </div>
-            <div>
-              <input type="submit" value="Enviar" id="enviar">
-              <input type="reset" value="Limpiar" id="limpiar">
-            </div>
-          </form>
-        </section>
-      </section>
+        </form>
+    </section>
+    
     </main>
-    <footer>
-      <div class="listas-footer" >
-        <div class="lista1">
-          <ul>
-            <li><span class="contenido">CONTENIDO</span></li>
-            <br>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="./sobre-nosotros.html">Nosotros</a></li>
-            <li><a href="./nuestros-tratamientos.html">Nuestros tratamientos</a></li>
-            <li><a href="./tipo-de-piel.html">Tipo de piel</a></li>
-            <li><a href="./contacto.html">Contactanos</a></li>
+    <footer class="container-fluid bg-dark text-white py-4">
+      <div class="row text-center text-md-center">
+        <div class="col-md-4 mb-3">
+          <h5 class="contenido">CONTENIDO</h5>
+          <ul class="list-unstyled">
+            <li><a href="../index.html" class="text-white">Inicio</a></li>
+            <li><a href="./sobre-nosotros.html" class="text-white">Nosotros</a></li>
+            <li><a href="./nuestros-tratamientos.html" class="text-white">Nuestros tratamientos</a></li>
+            <li><a href="./tipo-de-piel.html" class="text-white">Tipo de piel</a></li>
+            <li><a href="./contacto.html" class="text-white">Contactanos</a></li>
           </ul>
         </div>
-        <div class="lista2">
-          <ul>
-          <li><span class="servicios">SERVICIOS</span></li>
-          <br>
-          <li><a href="#">Consulta Online</a></li>
-          <li><a href="#">Diagnóstico de Piel</a></li>
-          <li><a href="#">Productos Recomendados</a></li>
-        </ul>
+        <div class="col-md-4 mb-3">
+          <h5 class="servicios">SERVICIOS</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Consulta Online</a></li>
+            <li><a href="#" class="text-white">Diagnóstico de Piel</a></li>
+            <li><a href="#" class="text-white">Productos Recomendados</a></li>
+          </ul>
         </div>
-        <div class="lista3">
-          <ul>
-            <li><span class="contenido">CONTENIDO</span></li>
-            <br>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="./sobre-nosotros.html">Nosotros</a></li>
-            <li><a href="./nuestros-tratamientos.html">Nuestros tratamientos</a></li>
-            <li><a href="./tipo-de-piel.html">Tipo de piel</a></li>
-            <li><a href="./contacto.html">Contactanos</a></li>
+        <div class="col-md-4 mb-3">
+          <h5 class="contenido">CONTENIDO</h5>
+          <ul class="list-unstyled">
+            <li><a href="../index.html" class="text-white">Inicio</a></li>
+            <li><a href="./sobre-nosotros.html" class="text-white">Nosotros</a></li>
+            <li><a href="./nuestros-tratamientos.html" class="text-white">Nuestros tratamientos</a></li>
+            <li><a href="./tipo-de-piel.html" class="text-white">Tipo de piel</a></li>
+            <li><a href="./contacto.html" class="text-white">Contactanos</a></li>
           </ul>
         </div>
       </div>
-      
-      
-      <div class="enlaces">
-        <a href="#" class="icon facebook"><i class="fa-brands fa-square-facebook fa-lg"></i></a>
-        <a href="#" class="icon tiktok"><i class="fa-brands fa-tiktok fa-lg"></i></a>
-        <a href="#" class="icon instagram"><i class="fa-brands fa-square-instagram"></i></a>
-        <a href="https://wa.me/1126325935" class="whatsapp" target="_blank"><i class="fa-brands fa-square-whatsapp"></i></a>
-    </div>
-    <p>&copy; 2025 Todos los derechos reservados.</p>
+      <div class="row text-center mt-3">
+        <div class="col">
+          <a href="#" class="text-white me-3"><i class="fa-brands fa-square-facebook fa-lg"></i></a>
+          <a href="#" class="text-white me-3"><i class="fa-brands fa-tiktok fa-lg"></i></a>
+          <a href="#" class="text-white me-3"><i class="fa-brands fa-square-instagram"></i></a>
+          <a href="https://wa.me/1126325935" class="text-white" target="_blank"><i class="fa-brands fa-square-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="row text-center mt-3">
+        <div class="col">
+          <p class="mb-0">&copy; 2025 Todos los derechos reservados.</p>
+        </div>
+      </div>
     </footer>
     <script src="../js/bootstrap.bundle.min.js"></script>
 
