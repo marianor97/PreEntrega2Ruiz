@@ -1,0 +1,218 @@
+/*ESTILOS INDEX*/
+
+/*PROPIEDADES PARA LA PRIMERA SECCIÓN DE LA PÁGINA PRINCIPAL*/
+html, body {
+  overflow-x: hidden;
+}
+.seccion1inicio {
+  overflow: hidden;
+  text-align: center;
+  font-family: "Montserrat", "Poppins", sans-serif;
+  padding: 20px;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  font-size: 3rems;
+  display: block;
+  color: #ffffff;
+  background: url("../assets/img/img-fondo-inicio.jpeg") fixed center/cover rgba(241, 116, 142, 0.7);
+  opacity: 0.8;
+
+  span {
+    color: #f1748e;
+  }
+
+  .button {
+    text-decoration: none;
+    color: white !important;
+    margin-top: 50px;
+    padding: 20px;
+    font-family: "Poppins", sans-serif !important;
+    font-size: 1rem;
+    border-radius: 5px;
+    border-color: #f1748e !important;
+    background-color: #f1748e !important;  ;
+  }
+
+  .btn {
+    margin: 20px 0;
+  }
+
+  p {
+    margin: 50px;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 1.3rem;
+  }
+}
+
+/*PROPIEDADES PARA LA SEGUNDA SECCIÓN DE LA PÁGINA DE INICIO QUIENES SOMOS*/
+.nosotros-inicio {
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+
+  .quienessomos {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  img {
+    width: 50%;
+    height: auto;
+    opacity: 0.75;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    margin-top: 50px;
+    padding: 20px;
+    font-family: "Poppins";
+    font-size: 1rem;
+    border-radius: 10px;
+    border-color: #f1748e;
+    background-color: #f1748e;
+  }
+
+  @media (max-width: 1000px) {
+    display: block;
+  }
+}
+/*PROPIEDADES DE LA TERCERA PARTE DEL INDEX TRATAMIENTOS*/
+
+.inicio-tratamientos {
+  color: white !important;
+
+  .fotos-tratamientos {
+    display: flex;
+    flex-wrap: wrap;
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    img {
+      width: 400px !important;
+      height: auto;
+    }
+
+    a {
+      margin-top: 50px !important;
+      margin-bottom: 50px !important;
+      text-decoration: none;
+      color: white;
+      font-family: "Poppins";
+      font-size: 1rem;
+      border-radius: 10px;
+      border-color: #f1748e;
+      background-color: #f1748e;
+      padding: 10px 20px;
+      transition: transform 0.6s ease-in-out, background 0.5s ease-in-out; 
+
+      &:hover {
+        transform: scale(1.2);
+        background-color: #f52c50;
+      }
+    }
+  }
+}
+
+
+
+/*SECCIÓN FORMULARIO INICIO*/
+.inicio-formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 80vh;
+  width: 100%;
+  padding: 40px 20px;
+  background: url("../assets/img/imagen-fondo-tratamientos.jpg") center/cover no-repeat;
+  
+  h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 900px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+  }
+
+  .form-control {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #f52c50;
+  }
+
+  .row {
+    margin-bottom: 20px;
+  }
+
+  .botones-form {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  #enviar, #limpiar {
+    padding: 10px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    transition: all 0.3s ease;
+  }
+
+  #enviar {
+    background-color: #f1748e;
+    color: white;
+    &:hover {
+      background-color: darken(#f1748e, 10%);
+    }
+  }
+
+  #limpiar {
+    background-color: #7c7c7c;
+    color: white;
+    &:hover {
+      background-color: darken(#7c7c7c, 10%);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .inicio-formulario {
+    padding: 20px;
+    h2 {
+      font-size: 2.5rem;
+    }
+  }
+}
+

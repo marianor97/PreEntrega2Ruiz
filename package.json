@@ -1,0 +1,19 @@
+{
+  "name": "pagina-web-estetica",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marianor97/PreEntrega2Ruiz.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marianor97/PreEntrega2Ruiz/issues"
+  },
+  "homepage": "https://github.com/marianor97/PreEntrega2Ruiz#readme",
+  "description": ""
+}

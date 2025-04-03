@@ -1,0 +1,45 @@
+
+/*ESTILOS DE NUESTROS TRATAMIENTOS - PRIMERA SECCION*/
+
+.nuestros-tratamientos{
+  width: 100% !important;
+  padding: 40px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  h1{
+    font-size: 6vw !important;
+    font-weight: 600;
+    color: #7c7c7c;
+  }
+  p{
+    font-size: 1rem;
+  }
+  overflow: hidden;
+  text-align: center;
+  font-family: "Montserrat", "Poppins", sans-serif;
+  padding: 20px;
+  font-size: 3rems;
+  display: block;
+  color: #ffffff;
+  background: url("../assets/img/imagen-fondo-tratamientos.jpg") fixed center/cover rgba(241, 116, 142, 0.7);
+  opacity: 0.8;
+}
+
+.tratamientos-faciales-1, .tratamientos-faciales-3, .tratamientos-faciales-5, .tratamientos-faciales-7{
+  padding: 50px !important;
+  color: white !important;
+  width: 100vw; // Ancho total de la ventana
+  margin: 0; 
+  padding: 0;
+
+  .row {
+      margin: 0 !important;
+      width: 100%;
+  }
+
+  h2, h3, p, li {
+      color: white !important;
+  }
+}

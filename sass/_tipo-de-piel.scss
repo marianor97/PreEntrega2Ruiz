@@ -1,0 +1,190 @@
+/*section.container {
+  padding: 2rem 0;
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../assets/img/imagen-fondo-tratamientos.jpeg') center/cover;
+  width: 100%;
+
+  h2 {
+    text-align: center;
+    color: #f52c50;
+    font-size: 2rem;
+    font-weight: bold;
+    span {
+      font-weight: normal;
+    }
+  }
+
+  form {
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+
+    fieldset {
+      border: none;
+      margin-bottom: 1.5rem;
+
+      legend {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #f52c50;
+      }
+    }
+
+    label {
+      font-weight: bold;
+      color: #7c7c7c;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+
+      &:focus {
+        border-color: #f52c50;
+        outline: none;
+        box-shadow: 0px 0px 5px rgba(245, 44, 80, 0.5);
+      }
+    }
+
+    .form-select:hover,
+    .form-select:focus {
+      background-color: #f52c50 !important;
+      color: white !important;
+    }
+
+    .form-check-input:checked {
+      background-color: #f52c50 !important;
+      border-color: #f52c50 !important;
+    }
+
+    .btn-primary {
+      background-color: #f1748e !important;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: #f52c50 !important;
+      }
+    }
+
+    .btn-secondary {
+      background-color: #7c7c7c !important;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: darken(#7c7c7c, 10%) !important;
+      }
+    }
+  }
+}*/
+// Estilos generales
+form {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2, legend {
+  color: #f52c50 !important;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+// Estilos para los inputs y selects
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #7c7c7c !important;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+
+  &:focus {
+    border-color: #f52c50 !important;
+    box-shadow: 0 0 5px rgba(245, 44, 80, 0.5);
+  }
+}
+
+// Estilos para los checkboxes
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+  .form-check-input {
+    width: 18px !important;
+    height: 18px !important;
+    accent-color: #f52c50 !important;
+  }
+}
+
+// Botones
+button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+
+  &.btn-primary {
+    background-color: #f52c50 !important;
+    color: white !important;
+    
+    &:hover {
+      background-color: darken(#f52c50, 10%) !important;
+    }
+  }
+
+  &.btn-secondary {
+    background-color: #7c7c7c !important;
+    color: white !important;
+    
+    &:hover {
+      background-color: darken(#7c7c7c, 10%) !important;
+    }
+  }
+}
+#ubicacion {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f7f7f7;
+
+  h2 {
+    color: #f52c50;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+
+  iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border: none;
+  }
+}

@@ -1,0 +1,112 @@
+/*ESTILOS PARA LA SEGUNDA PÁGINA - PRIMERA PARTE - PAGINA PRINCIPAL*/
+
+.nosotros-nosotros{
+  margin-top: 40px;
+  text-align: center;
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: row;
+  justify-content: space-evenlys;
+  align-items: center;
+  h1{
+    font-size: 4rem;
+    color: #7c7c7c !important;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    font-size: 3rem;
+    .resaltado{
+      background-color: #fec5cf;
+      color: white;
+      font-weight: 800;
+      font-style: italic;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      border-radius: 6px;
+    }
+  }
+  h2{
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+  }
+  p{
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+  }
+}
+@media (max-width: 1000px) {
+  .nosotros-nosotros{
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-evenlys;
+    align-items: center;
+    h1{
+      font-family: "Poppins", sans-serif !important;
+      width: 100%;
+      margin: 0;
+      padding: 10px;
+      font-size: 4rem !important;
+      font-weight: 300;
+    }
+    h2{
+      width: 100%;
+      padding: 10px;
+      margin: 0;
+    }
+    p{
+      width: 100%;
+      margin: 0;
+      padding: 10px;
+    }
+    h3{
+      font-size: 1rem;
+    }
+    img{
+      width: 400px;
+    }
+    
+  }
+}
+
+#metas{
+  background-image: linear-gradient(to right top, #00000093,  #f1abab93), url("../assets/img/imagen-metas-sobre-nosotros.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .card{
+    background-color: #fcfcfc00;
+    border: none;
+    p{
+      color: #ffffff;
+    }
+    img{
+      width: 7rem;
+    }
+  }
+
+
+  h2{
+    text-align: center;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 3.5rem;
+    font-weight: 600;
+  }
+  p{
+    margin:0;
+    text-align: center;
+  }
+}
